@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <style>
+    :root{
+      /* Colors */
+      /* primary */
+      --orange: hsl(25, 97%, 53%);
+
+      /* Neutral */
+      --white: hsl(0, 0%, 100%);
+      --light-grey: hsl(217, 12%, 63%);
+      --medium-grey: rgba(124, 135, 152, 0.2);
+      --dark-blue: hsl(213, 20%, 18%);
+      --very-dark-blue: hsl(216, 12%, 8%);
+    }
+
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Overpass', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--white);
+    }
+
+    /* Rating state start */
+    .ratingComponent{
+      height: 100vh;
+      width: 100vw;
+      background-color: var(--very-dark-blue);
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* CHANGE */
+    /* .ratingComponent .ratingState{
+      display: none;
+    } */
+
+    .ratingComponent .container{
+      height: 360px;
+      width: 328px;
+      border-radius: 20px;
+      padding: 24px;
+      background: var(--dark-blue);
+      background: radial-gradient(circle at top, hsl(213, 20%, 38%) -90%, hsl(213, 20%, 18%) 60%);
+    }
+
+    .ratingComponent .container .starIcon{
+      height: 40px;
+      width: 40px;
+      background-color: var(--medium-grey);
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .ratingComponent .container h3{
+      font-size: 24px;
+      font-weight: 700;
+      margin: 16px 0;
+    }
+
+    .ratingComponent .container p{
+      margin: 16px 0;
+      color: var(--light-grey);
+      line-height: 20px;
+    }
+    .ratingComponent .ratingState .ratingOptions{
+      display: flex;
+      justify-content: space-between;
+      align-items: center; 
+      margin: 32px 0 24px;
+    }
+
+    .ratingComponent .ratingState .ratingOptions div{
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      background-color: var(--medium-grey);
+      color: var(--light-grey);
+      cursor: pointer;
+    }
+
+    .ratingComponent .ratingState .ratingOptions div:hover{
+      color: var(--white);
+      background-color: var(--orange);
+    }
+
+    .ratingComponent .ratingState .ratingOptions .active{
+      color: var(--white);
+      background-color: var(--light-grey);
+    }
+
+    .ratingComponent .ratingState input[type="submit"]{
+      width: 100%;
+      height: 45px;
+      background-color: var(--orange);
+      border-radius: 45px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      cursor: pointer;
+    }
+
+    .ratingComponent .ratingState input[type="submit"]:hover{
+      background-color: var(--white);
+      color: var(--orange);
+    }
+    /* Rating state end */
+
+    /* Thank you state start */
+    .thankyouState{
+      /* CHANGE */
+      display: none;
+      text-align: center;
+    }
+
+    .thankyouState .thankyouImage{
+      margin: 12px 0;
+    }
+
+    .thankyouState .confirmation{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 30px;
+      width: 168px;
+      border-radius: 24px;
+      background-color: var(--medium-grey);
+      color: var(--light-grey);
+      margin: 20px auto 28px;
+    }
+    .thankyouState .confirmation p{
+      padding-top: 4px;
+      color: var(--orange);
+      font-weight: 700;
+    }
+    /* Thank you state end */
+
+    /* Attribution */
+    .attribution { 
+      font-size: 10px; 
+      text-align: center;
+      color: var(--light-grey); 
+    }
+
+    .attribution a { 
+      font-size: 10px; 
+      color: var(--light-grey); 
+    }
+  </style>
+</head>
+<body>
+  <div class="ratingComponent">
+    <div class="ratingState container">
+      <!-- Rating state start -->
+      <div class="starIcon">
+        <img src="images/icon-star.svg" alt="">
+      </div>
+
+      <h3>How did we do?</h3>
+      <p>
+        Please let us know how we did with your support request. All feedback is appreciated 
+        to help us improve our offering!
+      </p>
+      <div class="ratingOptions">
+        <div>1</div> 
+        <div>2</div>  
+        <div>3</div>  
+        <div>4</div>  
+        <div>5</div> 
+      </div>
+      <input type="submit" value="Submit">
+      <!-- Rating state end -->
+    </div>
+
+    <div class="thankyouState container">
+      <!-- Thank you state start -->
+      <div class="thankyouImage">
+        <img src="images/illustration-thank-you.svg" alt="">
+      </div>
+      <div class="confirmation">
+        <p>You selected 4 out of 5</p>
+      </div>
+      
+      <h3>
+      Thank you!
+      </h3>
+      <p>
+        We appreciate you taking the time to give a rating. If you ever need more support, 
+        don't hesitate to get in touch!
+      </p>
+      <!-- Thank you state end -->
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.frontendmentor.io/profile/arn28">Arnold Balabarca</a>.
+    </div>
+  </div> 
+</body>
+<script src="./js/rating.js"></script>
+</html>
