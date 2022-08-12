@@ -24,8 +24,8 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
 
 ### Links
 
-- Solution URL: [GitHub](https://github.com/arn28/nft-preview-card-component)
-- Live Site URL: [Vercel](https://nft-preview-card-component-arn28.vercel.app/)
+- Solution URL: [GitHub](https://github.com/arn28/interactive-rating-component.git)
+- Live Site URL: [Vercel](http://interactive-rating-component-arn28.vercel.app/)
 
 ## My process
 
